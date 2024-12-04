@@ -1,8 +1,8 @@
+import re
 from save_all_contacts import save_all_contacts
+
 def add_contact(all_contacts):
 
-    import re
-    # try:
     while True:
             try:
                 name = input("Enter name: ")
@@ -48,9 +48,5 @@ def add_contact(all_contacts):
 
 
     return all_contacts
-    
-    # except Exception as e:
-    #     print(f"Oops!!! {str(e)}")
-    #     return all_contacts
 
 

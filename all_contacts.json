@@ -1,23 +1,16 @@
 [
     {
+        "name": "rohim",
+        "number": 12345,
+        "email": "rohim@gmail.com",
+        "address": "dhaka",
+        "job_title": "teacher"
+    },
+    {
         "name": "korim",
-        "number": 0,
+        "number": 1234567,
         "email": "korim@gmail.com",
         "address": "khulna",
         "job_title": "doctor"
-    },
-    {
-        "name": "rohim",
-        "number": 12345,
-        "email": "alskd;fj",
-        "address": "als;kdfj",
-        "job_title": "a;sldkj"
-    },
-    {
-        "name": "f",
-        "number": 8888,
-        "email": "g@g.com",
-        "address": "l",
-        "job_title": "l"
     }
 ]
