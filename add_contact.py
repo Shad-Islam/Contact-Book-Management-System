@@ -17,6 +17,8 @@ def add_contact(all_contacts):
     
     all_contacts.append(contact)
     save_all_contacts(all_contacts)
+    print("Contact saved successfully!")
+
 
     return all_contacts
 

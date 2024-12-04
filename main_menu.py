@@ -1,5 +1,6 @@
 import json
 import add_contact
+import delete_contact
 import view_all_contact
 
 try:
@@ -24,7 +25,7 @@ while True:
     elif menu == "1":
         all_contacts=add_contact.add_contact(all_contacts)
     elif menu == "2":
-        print("select 2")
+        delete_contact.delete_contact(all_contacts)
     elif menu == "3":
         view_all_contact.view_all_contact()
     else:
