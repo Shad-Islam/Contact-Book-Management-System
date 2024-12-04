@@ -19,9 +19,14 @@ def add_contact(all_contacts):
                 number = int(input("Enter phone number: "))
                 if number <= 0:
                     raise ValueError("Phone number must be a positive number")
+                if any(contact["number"] == number for contact in all_contacts):
+                    raise ValueError("Phone number is already saved")
                 break
-            except ValueError:
-                print("Invalid input! Please enter a valid phone number (numbers only)")
+            except ValueError as e:
+                if "invalid literal" in str(e):
+                    print("Invalid input! Please enter a numeric phone number.")
+                else:
+                    print(f"{e}")
 
 
     while True:
