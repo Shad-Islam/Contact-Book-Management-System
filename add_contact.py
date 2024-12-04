@@ -1,9 +1,36 @@
 from save_all_contacts import save_all_contacts
 def add_contact(all_contacts):
 
-    name=input("Enter name: ")
-    number=int(input("Enter phone number: "))
-    email=input("Enter email: ")
+    import re
+    # try:
+    while True:
+            try:
+                name = input("Enter name: ")
+                if not name.strip():
+                    raise ValueError("Name cannot be empty")
+                if not any(char.isalpha() for char in name):
+                    raise ValueError("Name must contain at least one letter")
+                break
+            except ValueError as e:
+                print(f"Invalid input! {str(e)}")
+                continue
+    while True:
+            try:
+                number = int(input("Enter phone number: "))
+                if number <= 0:
+                    raise ValueError("Phone number must be a positive number")
+                break
+            except ValueError:
+                print("Invalid input! Please enter a valid phone number (numbers only)")
+
+
+    while True:
+            email=input("Enter email: ")
+            if re.match(r"[^@]+@[^@]+\.[^@]+", email):
+                break
+            else:
+                print("Invalid email format! Please enter a valid email address.")
+        
     address= input("Enter address: ")
     job_title= input("Enter job title: ")
 
@@ -14,12 +41,16 @@ def add_contact(all_contacts):
         "address":address,
         "job_title":job_title,
     }
-    
+        
     all_contacts.append(contact)
     save_all_contacts(all_contacts)
     print("Contact saved successfully!")
 
 
     return all_contacts
+    
+    # except Exception as e:
+    #     print(f"Oops!!! {str(e)}")
+    #     return all_contacts
 
 
