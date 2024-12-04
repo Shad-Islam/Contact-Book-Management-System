@@ -1,5 +1,6 @@
 import json
 import add_contact
+import search_contact
 import delete_contact
 import view_all_contact
 
@@ -14,7 +15,8 @@ while True:
     print("Press 0 for exit")
     print("Press 1 for add contact")
     print("Press 2 for delete contact")
-    print("press 3 for view all contacts")
+    print("Press 3 for view all contacts")
+    print("Press 4 for search contact")
 
     menu = input("Please select a number: ")
     print("\n")
@@ -28,5 +30,7 @@ while True:
         delete_contact.delete_contact(all_contacts)
     elif menu == "3":
         view_all_contact.view_all_contact()
+    elif menu == "4":
+        search_contact.search_contact(all_contacts)
     else:
         print("Invalid input")
